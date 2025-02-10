@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+}
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+input, button {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 1em;
+}
+button {
+    cursor: pointer;
+}
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+.dark-mode .container {
+    background: #333;
+}
+.toggle-darkmode {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
