@@ -4,6 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dog Breed Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+        h1 {
+            color: #343a40;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ced4da;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #message {
+            font-size: 18px;
+            color: red;
+            margin-top: 10px;
+        }
+        #image-container img {
+            margin-top: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+    </style>
     <script>
         document.addEventListener("DOMContentLoaded", async () => {
             const breedInput = document.getElementById("breed");
@@ -54,6 +94,6 @@
     <p id="message"></p>
     <div id="image-container"></div>
     <a href="index.html">CLick here to go Back</a>
-    
+
 </body>
 </html>
