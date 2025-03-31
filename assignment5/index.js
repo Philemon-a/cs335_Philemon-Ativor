@@ -12,7 +12,6 @@ app.use(express.static("public"));
 
 app.get('/hits/:pageId', async (req, res)=>{
     const pageId = req.params.pageId
-    console.log(pageId)
     let page = await db.findOne({pageId})
 
     if(page){

@@ -1,0 +1,47 @@
+body{
+    background-color: #345;
+    color: #ccc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16pt;
+}
+
+button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16pt;
+    background-color: #456;
+    color: #ccc;
+    border-radius: 2px;
+    width: 100%;
+    border: 1px solid;
+}
+
+button:hover{
+    background-color: #567;
+    cursor: pointer;
+}
+button:active{
+    background-color: #678;
+    cursor: pointer;
+}
+
+textarea{
+    font-family: monospace;
+    font-size: 16pt;
+    width: 100%;
+    height: 3em;
+}
+
+div{
+    padding: 1em;
+    margin: 1em;
+}
+
+.btns{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+#results{
+    white-space: pre;
+}
