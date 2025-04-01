@@ -122,16 +122,32 @@ $('#updateBtn').addEventListener('click', async () => {
 });
 
 // Delete button action
-$('#deleteBtn').addEventListener('click',()=>{
-    // confirm that the user wants to delete
-    if(!confirm("Are you sure you want to delete your profile?"))
+$('#deleteBtn').addEventListener('click', async () => {
+    // Confirm that the user wants to delete
+    if (!confirm("Are you sure you want to delete your profile?"))
         return;
-    // TODO: 
-    //   DELETE /users/{username}, where {username} is $('#username').innerText
-    //     decode response from json to object called doc
-    //     if doc.error, showError(doc.error)
-    //     otherwise, openLoginScreen()
-    //   use .catch(err=>showError('ERROR: '+err)}) to show any other errors
+
+    try {
+        const username = $('#username').innerText;
+
+        const response = await fetch(`/users/${username}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+
+        const doc = await response.json();
+
+        if (doc.error) {
+            showError(doc.error);
+            return;
+        }
+
+        openLoginScreen();
+    } catch (err) {
+        showError('ERROR: ' + err);
+    }
 });
 
 function showListOfUsers(){
