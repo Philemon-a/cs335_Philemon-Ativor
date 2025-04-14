@@ -1,4 +1,5 @@
-{"username":"Philemon","password":"1234567890","name":"Phielmon Ativor","email":"pa@gmail.com","_id":"NB1R6gIQRiHbey23"}
-{"username":"Philemon","password":"1234567890","name":"Phielmon Ativor","email":"pa@gmail.com","_id":"NB1R6gIQRiHbey23"}
-{"username":"Philemon","password":"1234567890","name":"Phielmon Ativor","email":"pa@gmail.com","_id":"NB1R6gIQRiHbey23"}
-{"$$deleted":true,"_id":"NB1R6gIQRiHbey23"}
+{"username":"aaa","password":"$2b$10$qmGA979flmhEkJJ4xnKoyuYOv1pBor.4LCvTf9SmRhtBMeOETX08a","email":"aaa","name":"aaa","authenticationToken":"8172c41873a774df1002a05bce19b322ae00a3431f0ccccd8246a4cdcdeb6de8","_id":"loZVMWZBMFcctPQe"}
+{"username":"aaa","password":"$2b$10$qmGA979flmhEkJJ4xnKoyuYOv1pBor.4LCvTf9SmRhtBMeOETX08a","email":"aaa","name":"aaa","authenticationToken":"947b07fda9670be4dccef033b9c0a8847e762e8a1b72d14d88df3ab1ebca4f73","_id":"loZVMWZBMFcctPQe"}
+{"username":"aaa","password":"$2b$10$qmGA979flmhEkJJ4xnKoyuYOv1pBor.4LCvTf9SmRhtBMeOETX08a","email":"aaa","name":"aaa","_id":"loZVMWZBMFcctPQe"}
+{"username":"aaa","password":"$2b$10$qmGA979flmhEkJJ4xnKoyuYOv1pBor.4LCvTf9SmRhtBMeOETX08a","email":"aaa","name":"aaa","_id":"loZVMWZBMFcctPQe","authenticationToken":"ce42973f7819b541e54c20450d1301b76c22b93293ce2fce4926dae8854339cd"}
+{"$$deleted":true,"_id":"loZVMWZBMFcctPQe"}
