@@ -48,47 +48,49 @@
             var fr = new FileReader();
             fr.onload = function() {
                 const img = new Image();
-
+                img.onload = function(){
+                    const ratio = img.width / img.height;
+                    imgCanvaswidth = 500;
+                    imgCanvas.height = 500 / ratio;
+                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                }
+                img.src = fr.result;
             }
-            fr.readAsText(fileInput.files[0]);
+            fr.readAsDataURL(fileInput.files[0]);
             fileName.value = fileInput.value.split('\\').at(-1).split('/').at(-1);
-
         });
         fileInput.click();
     });
 
     saveButton.addEventListener('click', async () => {
-        const handle = await showSaveFilePicker({
-            suggestedName: fileName.value,
-        
-        });
-        const stream = await handle.createWritable();
-        await stream.write(fileContent.value);
-        await stream.close();
+        const downloadLink = document.createElement('a');
+        downloadLink.download = fileName.value || 'canvas-image.png';
+        downloadLink.href = imgCanvas.toDataURL('image/png');
+        downloadLink.click();
     });
 
     let drawing = false;
     canvas.addEventListener('mousedown', () => {
-        drawing = true;
-        radius= 20+20*Math.random();
+        drawing= 20+20*Math.random();
         const red = Math.floor(Math.random() * 256);
         const green = Math.floor(Math.random() * 256);
         const blue = Math.floor(Math.random() * 256);
-        ctx.fillStyle = `rgb(${red}, ${green}, ${blue})`;
+        ctx.fillStyle = `rgba(${red}, ${green}, ${blue}),0.2`;
 
+    });
+
+    
+    canvas.addEventListener('mousemove', (event) => {
+        if (drawing) {
+            ctx.beginPath();
+            ctx.arc(event.offsetX, event.offsetY, drawing, 0, Math.PI * 2);
+            ctx.fill();
+        }
     });
 
     canvas.addEventListener('mouseup', () => {
         drawing = false;
     });
-
-    canvas.addEventListener('mousemove', (event) => {
-        if (drawing) {
-          ctx.beginPath();
-            ctx.arc(event.offsetX, event.offsetY, radius, 0, Math.PI * 2);
-            ctx.fill();
-        }
-    });
-
+    
 </script>
 </html>
